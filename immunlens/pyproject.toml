@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "immunlens"
+version = "0.1.0"
+description = "Single-cell immune repertoire analysis workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "anndata",
+  "leidenalg",
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "python-igraph",
+  "scanpy",
+  "scikit-learn",
+  "scipy",
+  "seaborn",
+  "statsmodels",
+  "torch",
+  "transformers",
+  "umap-learn",
+]
+
+[project.optional-dependencies]
+tcrdist = ["tcrdist3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
